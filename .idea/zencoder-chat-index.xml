@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ai.zencoder.plugin.chat.index">
+    <option name="chatMetadata" value="{&quot;9aad63b5-53f2-4857-91e2-a6bb9a1636b1&quot;:{&quot;id&quot;:&quot;9aad63b5-53f2-4857-91e2-a6bb9a1636b1&quot;,&quot;title&quot;:&quot;Query About Issue Root Cause&quot;,&quot;createdAt&quot;:1763035457155,&quot;updatedAt&quot;:1763035655026,&quot;isAgent&quot;:true,&quot;isNameGenerated&quot;:true,&quot;messageCount&quot;:5,&quot;lastMessagePreview&quot;:&quot;**Identifying syntax error causes**&quot;},&quot;5a99e7f4-fb44-4592-8c25-d6b63d8e91c3&quot;:{&quot;id&quot;:&quot;5a99e7f4-fb44-4592-8c25-d6b63d8e91c3&quot;,&quot;title&quot;:&quot;Repo Insight Summary&quot;,&quot;createdAt&quot;:1763034530060,&quot;updatedAt&quot;:1763034558806,&quot;isNameGenerated&quot;:true,&quot;messageCount&quot;:3,&quot;lastMessagePreview&quot;:&quot;The cat commands didn't work. Let me try a different approach using the fulltext_search tool to get ...&quot;}}" />
+  </component>
+</project>

@@ -7,6 +7,7 @@ import useFetch from "@/services/useFetch";
 import {fetchMovies} from "@/services/api";
 import {icons} from "@/constants/icons";
 import SearchBar from "@/app/components/SearchBar";
+import {updateSearchCount} from "@/services/appwrite";
 
 const Search = () => {
 
@@ -24,15 +25,22 @@ const Search = () => {
         }), false)
 
     useEffect(() => {
+
         const timeoutId = setTimeout( async () => {
             if (searchQuery.trim()) {
                 await loadMovies();
+
             } else {
                 reset()
             }
-        },  500)
+        },  700)
         return () => clearTimeout(timeoutId);
     }, [searchQuery]);
+
+    useEffect(() => {
+        if(movies?.length > 0 && movies?.[0])
+            updateSearchCount(searchQuery, movies[0]);
+    }, [movies]);
 
 
     return (
