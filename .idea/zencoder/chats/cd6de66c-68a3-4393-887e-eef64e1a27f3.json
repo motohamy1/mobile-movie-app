@@ -1,0 +1,108 @@
+{
+    "checksum": "bc5d423834b95c828298b5111d11ac6c0e01a3dbbf7012ce3e1d27d7ac964656",
+    "data": {
+    "id": "cd6de66c-68a3-4393-887e-eef64e1a27f3",
+    "createdAt": 1763387664200,
+    "updatedAt": 1763387682040,
+    "title": "Debugging Missing Route: movies/[id] Top Title",
+    "messages": [
+        {
+            "id": "53ea51ad-220d-4fdb-9a3a-70dae87c593a",
+            "role": "user",
+            "content": [
+                {
+                    "type": "fileMention",
+                    "fileName": "Pasted image",
+                    "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                    "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png"
+                },
+                {
+                    "type": "text",
+                    "text": " why it still show the text : movies/[id] in the top of the page"
+                }
+            ],
+            "context": {
+                "attachedFiles": [
+                    {
+                        "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                        "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png"
+                    }
+                ],
+                "currentFile": {
+                    "path": "app/movies/[id].tsx",
+                    "fsPath": "D:/Programming/Mobile Development/mobile_movie_app/app/movies/[id].tsx",
+                    "sources": [
+                        "opened_tab"
+                    ],
+                    "content": "import {\n    View,\n    Text,\n    Image,\n    ActivityIndicator,\n    ScrollView,\n    TouchableOpacity,\n} from \"react-native\";\nimport { useLocalSearchParams, useRouter } from \"expo-router\";\nimport { SafeAreaView } from \"react-native-safe-area-context\";\n\nimport { icons } from \"@/constants/icons\";\nimport useFetch from \"@/services/useFetch\";\nimport { fetchMovieDetails } from \"@/services/api\";\n\ninterface MovieInfoProps {\n    label: string;\n    value?: string | number | null;\n}\n\nconst MovieInfo = ({ label, value }: MovieInfoProps) => (\n    <View className=\"flex-col items-start justify-center mt-5\">\n        <Text className=\"text-light-200 font-normal text-sm\">{label}</Text>\n        <Text className=\"text-light-100 font-bold text-sm mt-2\">\n            {value || \"N/A\"}\n        </Text>\n    </View>\n);\n\nconst Details = () => {\n    const router = useRouter();\n    const { id } = useLocalSearchParams();\n\n    const { data: movie, loading } = useFetch<MovieDetails>(() =>\n        fetchMovieDetails(id as string)\n    );\n\n    if (loading)\n        return (\n            <SafeAreaView className=\"bg-primary flex-1\">\n                <ActivityIndicator />\n            </SafeAreaView>\n        );\n\n    return (\n        <View className=\"bg-primary flex-1\">\n            <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>\n                <View>\n                    <Image\n                        source={{\n                            uri: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,\n                        }}\n                        className=\"w-full h-[550px]\"\n                        resizeMode=\"stretch\"\n                    />\n\n                    <TouchableOpacity className=\"absolute bottom-5 right-5 rounded-full size-14 bg-white flex items-center justify-center\">\n                        <Image\n                            source={icons.play}\n                            className=\"w-6 h-7 ml-1\"\n                            resizeMode=\"stretch\"\n                        />\n                    </TouchableOpacity>\n                </View>\n\n                <View className=\"flex-col items-start justify-center mt-5 px-5\">\n                    <Text className=\"text-white font-bold text-xl\">{movie?.title}</Text>\n                    <View className=\"flex-row items-center gap-x-1 mt-2\">\n                        <Text className=\"text-light-200 text-sm\">\n                            {movie?.release_date?.split(\"-\")[0]} •\n                        </Text>\n                        <Text className=\"text-light-200 text-sm\">{movie?.runtime}m</Text>\n                    </View>\n\n                    <View className=\"flex-row items-center bg-dark-100 px-2 py-1 rounded-md gap-x-1 mt-2\">\n                        <Image source={icons.star} className=\"size-4\" />\n\n                        <Text className=\"text-white font-bold text-sm\">\n                            {Math.round(movie?.vote_average ?? 0)}/10\n                        </Text>\n\n                        <Text className=\"text-light-200 text-sm\">\n                            ({movie?.vote_count} votes)\n                        </Text>\n                    </View>\n\n                    <MovieInfo label=\"Overview\" value={movie?.overview} />\n                    <MovieInfo\n                        label=\"Genres\"\n                        value={movie?.genres?.map((g) => g.name).join(\" • \") || \"N/A\"}\n                    />\n\n                    <View className=\"flex flex-row justify-between w-1/2\">\n                        <MovieInfo\n                            label=\"Budget\"\n                            value={`$${(movie?.budget ?? 0) / 1_000_000} million`}\n                        />\n                        <MovieInfo\n                            label=\"Revenue\"\n                            value={`$${Math.round(\n                                (movie?.revenue ?? 0) / 1_000_000\n                            )} million`}\n                        />\n                    </View>\n\n                    <MovieInfo\n                        label=\"Production Companies\"\n                        value={\n                            movie?.production_companies?.map((c) => c.name).join(\" • \") ||\n                            \"N/A\"\n                        }\n                    />\n                </View>\n            </ScrollView>\n\n            <TouchableOpacity\n                className=\"absolute bottom-5 left-0 right-0 mx-5 bg-accent rounded-lg py-3.5 flex flex-row items-center justify-center z-50\"\n                onPress={router.back}\n            >\n                <Image\n                    source={icons.arrow}\n                    className=\"size-5 mr-1 mt-0.5 rotate-180\"\n                    tintColor=\"#fff\"\n                />\n                <Text className=\"text-white font-semibold text-base\">Go Back</Text>\n            </TouchableOpacity>\n        </View>\n    );\n};\n\nexport default Details;",
+                    "language": "typescript jsx"
+                }
+            },
+            "createdAt": 1763387664209,
+            "isInternal": false,
+            "rawContent": {
+                "type": "doc",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "mention",
+                                "attrs": {
+                                    "label": "Pasted image",
+                                    "summary": null,
+                                    "description": null,
+                                    "type": "file",
+                                    "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                                    "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                                    "contentType": "image/png",
+                                    "name": null,
+                                    "uri": null,
+                                    "tooltip": null,
+                                    "sessionId": null,
+                                    "timestamp": null,
+                                    "content": null
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " why it still show the text : movies/[id] in the top of the page"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "autoAppliedRules": []
+        },
+        {
+            "id": "26491283-0745-4e0d-9154-81039e25ad4b",
+            "role": "system",
+            "content": [
+                {
+                    "type": "errorText",
+                    "text": "Something went wrong. Please try again later",
+                    "actions": [
+                        {
+                            "type": "externalAction",
+                            "title": "Regenerate",
+                            "action": "regenerateLastAnswer"
+                        }
+                    ]
+                }
+            ],
+            "createdAt": 1763387682040,
+            "isInternal": false
+        }
+    ],
+    "isAgent": true,
+    "isNameGenerated": true,
+    "isCustomAgent": false,
+    "isUnitTestsAgent": false,
+    "isE2EAgent": false,
+    "isWebDevAgent": false,
+    "isQnaAgent": false,
+    "isRepoInfoAgent": false,
+    "model": "default",
+    "agentsRuntime": "claude-code"
+}
+}

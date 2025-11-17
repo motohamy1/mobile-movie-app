@@ -1,0 +1,405 @@
+{
+    "checksum": "403522a1d43d2ccc021dc6cfe6fd716748ee220d9c6e0fec025088bc14ac476d",
+    "data": {
+    "id": "7ec2ff00-10ca-4832-8e01-5298d304a348",
+    "createdAt": 1763387511651,
+    "updatedAt": 1763387635026,
+    "title": "Repo Documentation Extractor",
+    "messages": [
+        {
+            "id": "814f5c7f-36e9-4586-8fff-0b4dcd96182f",
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Generate repo.md file with information from my repo"
+                }
+            ],
+            "context": {},
+            "createdAt": 1763387511683,
+            "isInternal": false,
+            "rawContent": {
+                "type": "doc",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "Generate repo.md file with information from my repo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "autoAppliedRules": []
+        },
+        {
+            "id": "00f58a9a-3d11-125e-8913-26a751bf184e",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_17812666",
+                    "toolName": "LS",
+                    "status": "SUCCESS",
+                    "input": {
+                        "path": "D:\\Programming\\Mobile Development\\mobile_movie_app"
+                    },
+                    "output": "- D:\\Programming\\Mobile Development\\mobile_movie_app/\n  - .expo/\n  - .idea/\n    - inspectionProfiles/\n      - ...\n    - zencoder/\n      - ...\n    - .gitignore (184 B)\n    - aws.xml (455 B)\n    - copilot.data.migration.agent.xml (195 B)\n    - copilot.data.migration.ask.xml (193 B)\n    - copilot.data.migration.ask2agent.xml (199 B)\n    - copilot.data.migration.edit.xml (194 B)\n    - JunieProjectTechnologies.xml (259 B)\n    - material_theme_project_new.xml (425 B)\n    - mobile_movie_app.iml (469 B)\n    - modules.xml (291 B)\n    - vcs.xml (172 B)\n    - workspace.xml (21.25 KB)\n    - zencoder-chat-index.xml (1.02 KB)\n  - .qodo/\n    - agents/\n    - workflows/\n  - .vscode/\n    - .react/\n  - .zencoder/\n    - docs/\n    - rules/\n    - .gitignore (39 B)\n  - app/\n    - (tabs)/\n      - ...\n    - components/\n      - ...\n    - movies/\n      - ...\n    - _layout.tsx (464 B)\n    - globals.css (60 B)\n  - assets/\n    - fonts/\n      - ...\n    - icons/\n      - ...\n    - images/\n      - ...\n  - constants/\n    - icons.ts (458 B)\n    - images.ts (229 B)\n  - interfaces/\n    - interfaces.d.ts (1.46 KB)\n  - node_modules/\n  - services/\n    - api.ts (1.81 KB)\n    - appwrite.ts (1.85 KB)\n    - useFetch.ts (1 KB)\n  - types/\n    - images.d.ts (75 B)\n  - .env (537 B)\n  - .gitignore (453 B)\n  - app.json (1.16 KB)\n  - babel.config.js (191 B)\n  - eslint.config.js (237 B)\n  - metro.config.js (234 B)\n  - nativewind-env.d.ts (41 B)\n  - package-lock.json (499.92 KB)\n  - package.json (1.54 KB)\n  - README.md (1.7 KB)\n  - tailwind.config.js (549 B)\n  - tsconfig.json (268 B)\n\n(641 items were git-ignored)"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387520759,
+            "isInternal": false
+        },
+        {
+            "id": "bbd351c9-0dc9-0c3c-0d5a-e79b624db874",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_38074162",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\README.md"
+                    },
+                    "output": "Lines 1-51 of 51 from D:\\Programming\\Mobile Development\\mobile_movie_app\\README.md:\n# Welcome to your Expo app 👋\r\n\r\nThis is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).\r\n\r\n## Get started\r\n\r\n1. Install dependencies\r\n\r\n   ```bash\r\n   npm install\r\n   ```\r\n\r\n2. Start the app\r\n\r\n   ```bash\r\n   npx expo start\r\n   ```\r\n\r\nIn the output, you'll find options to open the app in a\r\n\r\n- [development build](https://docs.expo.dev/develop/development-builds/introduction/)\r\n- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)\r\n- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)\r\n- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo\r\n\r\nYou can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).\r\n\r\n## Get a fresh project\r\n\r\nWhen you're ready, run:\r\n\r\n```bash\r\nnpm run reset-project\r\n```\r\n\r\nThis command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.\r\n\r\n## Learn more\r\n\r\nTo learn more about developing your project with Expo, look at the following resources:\r\n\r\n- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).\r\n- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.\r\n\r\n## Join the community\r\n\r\nJoin our community of developers creating universal apps.\r\n\r\n- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.\r\n- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387523464,
+            "isInternal": false
+        },
+        {
+            "id": "916dbbb3-3a89-59e1-6498-64c745ad6659",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_01527322",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\package.json"
+                    },
+                    "output": "Lines 1-53 of 53 from D:\\Programming\\Mobile Development\\mobile_movie_app\\package.json:\n{\r\n  \"name\": \"mobile_movie_app\",\r\n  \"main\": \"expo-router/entry\",\r\n  \"version\": \"1.0.0\",\r\n  \"scripts\": {\r\n    \"start\": \"expo start\",\r\n    \"reset-project\": \"node ./scripts/reset-project.js\",\r\n    \"android\": \"expo start --android\",\r\n    \"ios\": \"expo start --ios\",\r\n    \"web\": \"expo start --web\",\r\n    \"lint\": \"expo lint\"\r\n  },\r\n  \"dependencies\": {\r\n    \"@expo/vector-icons\": \"^15.0.3\",\r\n    \"@react-native-masked-view/masked-view\": \"^0.3.2\",\r\n    \"@react-navigation/bottom-tabs\": \"^7.4.0\",\r\n    \"@react-navigation/elements\": \"^2.6.3\",\r\n    \"@react-navigation/native\": \"^7.1.8\",\r\n    \"expo\": \"~54.0.20\",\r\n    \"expo-constants\": \"~18.0.10\",\r\n    \"expo-font\": \"~14.0.9\",\r\n    \"expo-haptics\": \"~15.0.7\",\r\n    \"expo-image\": \"~3.0.10\",\r\n    \"expo-linking\": \"~8.0.8\",\r\n    \"expo-router\": \"~6.0.13\",\r\n    \"expo-splash-screen\": \"~31.0.10\",\r\n    \"expo-status-bar\": \"~3.0.8\",\r\n    \"expo-symbols\": \"~1.0.7\",\r\n    \"expo-system-ui\": \"~6.0.8\",\r\n    \"expo-web-browser\": \"~15.0.8\",\r\n    \"nativewind\": \"^4.1.23\",\r\n    \"react\": \"19.1.0\",\r\n    \"react-dom\": \"19.1.0\",\r\n    \"react-native\": \"0.81.5\",\r\n    \"react-native-appwrite\": \"^0.18.0\",\r\n    \"react-native-gesture-handler\": \"~2.28.0\",\r\n    \"react-native-reanimated\": \"~4.1.1\",\r\n    \"react-native-safe-area-context\": \"~5.6.0\",\r\n    \"react-native-screens\": \"~4.16.0\",\r\n    \"react-native-url-polyfill\": \"^3.0.0\",\r\n    \"react-native-web\": \"~0.21.0\",\r\n    \"react-native-worklets\": \"0.5.1\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@types/react\": \"~19.1.0\",\r\n    \"eslint\": \"^9.25.0\",\r\n    \"eslint-config-expo\": \"~10.0.0\",\r\n    \"tailwindcss\": \"^3.4.1\",\r\n    \"typescript\": \"~5.9.2\"\r\n  },\r\n  \"private\": true\r\n}\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387525470,
+            "isInternal": false
+        },
+        {
+            "id": "ef5da190-df0c-e78c-062c-856d4d7336b3",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_16010268",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\app.json"
+                    },
+                    "output": "Lines 1-49 of 49 from D:\\Programming\\Mobile Development\\mobile_movie_app\\app.json:\n{\r\n  \"expo\": {\r\n    \"name\": \"movies ocean\",\r\n    \"slug\": \"movies ocean\",\r\n    \"version\": \"1.0.0\",\r\n    \"orientation\": \"portrait\",\r\n    \"icon\": \"./assets/images/logo.png\",\r\n    \"scheme\": \"movies\",\r\n    \"userInterfaceStyle\": \"automatic\",\r\n    \"newArchEnabled\": true,\r\n    \"ios\": {\r\n      \"supportsTablet\": true\r\n    },\r\n    \"android\": {\r\n      \"adaptiveIcon\": {\r\n        \"backgroundColor\": \"#E6F4FE\",\r\n        \"foregroundImage\": \"./assets/images/logo.png\",\r\n        \"backgroundImage\": \"./assets/images/android-icon-background.png\",\r\n        \"monochromeImage\": \"./assets/images/android-icon-monochrome.png\"\r\n      },\r\n      \"edgeToEdgeEnabled\": true,\r\n      \"predictiveBackGestureEnabled\": false\r\n    },\r\n    \"web\": {\r\n      \"output\": \"static\",\r\n      \"favicon\": \"./assets/images/logo.png\"\r\n    },\r\n    \"plugins\": [\r\n      \"expo-router\",\r\n      [\r\n        \"expo-splash-screen\",\r\n        {\r\n          \"image\": \"./assets/images/logo.png\",\r\n          \"imageWidth\": 200,\r\n          \"resizeMode\": \"contain\",\r\n          \"backgroundColor\": \"#ffffff\",\r\n          \"dark\": {\r\n            \"backgroundColor\": \"#000000\"\r\n          }\r\n        }\r\n      ]\r\n    ],\r\n    \"experiments\": {\r\n      \"typedRoutes\": true,\r\n      \"reactCompiler\": true\r\n    }\r\n  }\r\n}\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387532656,
+            "isInternal": false
+        },
+        {
+            "id": "dab248ad-2406-f39e-a1ef-485edb3da871",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_04288326",
+                    "toolName": "LS",
+                    "status": "SUCCESS",
+                    "input": {
+                        "path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\app"
+                    },
+                    "output": "- D:\\Programming\\Mobile Development\\mobile_movie_app\\app/\n  - (tabs)/\n    - _layout.tsx (3.9 KB)\n    - index.tsx (3.64 KB)\n    - profile.tsx (590 B)\n    - saved.tsx (188 B)\n    - search.tsx (3.65 KB)\n  - components/\n    - MovieCard.tsx (1.83 KB)\n    - SearchBar.tsx (839 B)\n    - TrendingCard.tsx (1.51 KB)\n  - movies/\n    - [id].tsx (4.86 KB)\n  - _layout.tsx (464 B)\n  - globals.css (60 B)"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387534755,
+            "isInternal": false
+        },
+        {
+            "id": "70f900a3-ccde-c22f-f64f-caf0dc87c9db",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_74324899",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\app\\(tabs)\\index.tsx"
+                    },
+                    "output": "Lines 1-108 of 108 from D:\\Programming\\Mobile Development\\mobile_movie_app\\app\\(tabs)\\index.tsx:\nimport { images } from \"@/constants/images\";\r\nimport { icons } from \"@/constants/icons\";\r\nimport { useRouter } from \"expo-router\";\r\nimport { ScrollView, View, Image, Text, ActivityIndicator, FlatList } from \"react-native\";\r\nimport SearchBar from \"../components/SearchBar\";\r\nimport useFetch from \"@/services/useFetch\";\r\nimport { fetchMovies } from \"@/services/api\";\r\nimport MovieCard from \"@/app/components/MovieCard\";\r\nimport React from \"react\";\r\nimport { getTrendingMovies } from \"@/services/appwrite\";\r\nimport TrendingCard from \"@/app/components/TrendingCard\";\r\n\r\nexport default function Index() {\r\n  const router = useRouter();\r\n\r\n  const {\r\n      data: trendingMovies,\r\n      loading: trendingLoading,\r\n      error: trendingError\r\n  } = useFetch<TrendingMovie[]>(getTrendingMovies);\r\n\r\n  const { data: movies, loading: moviesLoading, error: moviesError } = useFetch<Movie[]>(\r\n          () => fetchMovies({ query: '' }))\r\n\r\n  return (\r\n    <View className=\"flex-1 bg-primary\">\r\n      <Image\r\n          source={images.bg}\r\n          className=\"absolute w-full z-0\"\r\n          resizeMode=\"cover\"\r\n      />\r\n      <ScrollView\r\n        className=\"flex-1 px-5\"\r\n        showsVerticalScrollIndicator={false}\r\n        contentContainerStyle={{\r\n            paddingBottom: 10,\r\n            minHeight: \"100%\",\r\n        }}\r\n      >\r\n        <Image source={icons.logo} className=\"w-12 h-10 mt-20 mb-5 mx-auto\" />\r\n\r\n        {moviesLoading || trendingLoading ? (\r\n          <ActivityIndicator\r\n            size=\"large\"\r\n            color=\"#0000ff\"\r\n            className=\"mt-10 self-center\"\r\n          />\r\n        ) : moviesError || trendingError ? (\r\n          <Text className=\"text-red-500 text-center mt-10\">\r\n            Error: {moviesError?.message || trendingError?.message}\r\n          </Text>\r\n        ) : (\r\n          <View className=\"flex-1 mt-5\">\r\n            <SearchBar\r\n              onPress={() => router.push(\"/search\")}\r\n              placeholder=\"Search for a movie\"\r\n            />\r\n              {trendingMovies && trendingMovies.length > 0 && (\r\n                  <View className=\"mt-10\">\r\n                      <Text className=\"text-lg text-white font-bold mb-3\">\r\n                            Trending Searches\r\n                      </Text>\r\n                  </View>\r\n              )}\r\n            {trendingMovies && trendingMovies.length > 0 && (\r\n                <FlatList\r\n                    horizontal={true}\r\n                    showsHorizontalScrollIndicator={false}\r\n                    ItemSeparatorComponent={() => <View className=\"w-4\" />}\r\n                    className=\"mb-4 mt-3\"\r\n                    data={trendingMovies}\r\n                    renderItem={({ item, index }) => (\r\n                        <TrendingCard movie={item} index={index} />\r\n                    )}\r\n                    keyExtractor={(item) => item.movie_id.toString()}\r\n                />\r\n            )}\r\n\r\n\r\n            <Text className=\"text-lg text-white font-bold mt-5 mb-3\">Latest Movies</Text>\r\n\r\n            {movies && movies.length > 0 ? (\r\n                <FlatList\r\n                    data={movies}\r\n                    renderItem={({ item }) => <MovieCard {...item} />}\r\n                    keyExtractor={(item) => item.id.toString()}\r\n                    numColumns={3}\r\n                    className=\"mt-2 pb-32\"\r\n                    columnWrapperStyle={{\r\n                        justifyContent: 'flex-start',\r\n                        gap: 20,\r\n                        paddingRight: 5,\r\n                        marginBottom: 16\r\n                    }}\r\n                    scrollEnabled={false}\r\n                />\r\n            ) : (\r\n                <Text className=\"text-white text-center mt-10\">No movies available</Text>\r\n            )}\r\n          </View>\r\n\r\n      )}\r\n        </ScrollView>\r\n    </View>\r\n\r\n  );\r\n}\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387536725,
+            "isInternal": false
+        },
+        {
+            "id": "a7257307-9150-8988-a119-a4cb97735c4b",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_60094924",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\services\\api.ts"
+                    },
+                    "output": "Lines 1-60 of 60 from D:\\Programming\\Mobile Development\\mobile_movie_app\\services\\api.ts:\nexport const TMDB_CONFIG = {\r\n    BASE_URL : 'https://api.themoviedb.org/3',\r\n    API_KEY: process.env.EXPO_PUBLIC_MOVIE_API_KEY,\r\n    header: {\r\n        accept: 'application/json',\r\n        Authorization: `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`\r\n    }\r\n}\r\n\r\nexport const fetchMovies = async ({ query }: {query : string}) => {\r\n    const endpoint = query \r\n    ?   `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}`\r\n    :   `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;\r\n    const url = endpoint;\r\n    const response = await fetch (url, {\r\n        method: \"GET\",\r\n        headers: TMDB_CONFIG.header\r\n    });\r\n\r\n    if(!response.ok){   \r\n        throw new Error('Failed to fetch movies')\r\n    }\r\n\r\n    const data = await response.json();\r\n    return data.results;\r\n}\r\n\r\nexport const fetchMovieDetails = async ( movieId : string ): Promise<MovieDetails> =>{\r\n    try {\r\n        const response = await fetch(`${TMDB_CONFIG.BASE_URL}/movie/${movieId}?api_key=${TMDB_CONFIG.API_KEY}`,{\r\n            method: 'GET',\r\n            headers: TMDB_CONFIG.header,\r\n        });\r\n\r\n        if(!response.ok) throw new Error('Failed to fetch movie details');\r\n\r\n        const data = await response.json();\r\n\r\n        return data;\r\n    } catch (error) {\r\n        console.log(error);\r\n        throw error;\r\n    }\r\n}\r\n\r\n// const url =`${BASE_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;\r\n// const options = {\r\n//     method: \"GET\",\r\n//     headers: {\r\n//         accept: \"application/json\",\r\n//         Authorization:\r\n//             `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`,\r\n//     },\r\n// };\r\n\r\n// fetch(url, options)\r\n//     .then((res) => res.json())\r\n//     .then((json) => console.log(json))\r\n//     .catch((err) => console.error(err));\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387544573,
+            "isInternal": false
+        },
+        {
+            "id": "f6850f70-6b56-2995-1a55-81d3c0d6f858",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_75519130",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\services\\appwrite.ts"
+                    },
+                    "output": "Lines 1-55 of 55 from D:\\Programming\\Mobile Development\\mobile_movie_app\\services\\appwrite.ts:\nimport { Client, Databases, ID, Query } from \"react-native-appwrite\";\r\n\r\nconst DATABASE_ID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;\r\nconst COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID!;\r\n\r\nconst client = new Client()\r\n    .setEndpoint(\"https://cloud.appwrite.io/v1\")\r\n    .setProject(process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!);\r\n\r\nconst database = new Databases(client);\r\n\r\nexport const updateSearchCount = async (query: string, movie: Movie) => {\r\n    try {\r\n        const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [\r\n            Query.equal(\"searchTerm\", query),\r\n        ]);\r\n\r\n        if (result.documents.length > 0) {\r\n            const existingMovie = result.documents[0];\r\n            await database.updateDocument(\r\n                DATABASE_ID,\r\n                COLLECTION_ID,\r\n                existingMovie.$id,\r\n                {\r\n                    count: existingMovie.count + 1,\r\n                }\r\n            );\r\n        } else {\r\n            await database.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {\r\n                searchTerm: query,\r\n                movie_id: movie.id,\r\n                title: movie.title,\r\n                count: 1,\r\n                poster_url: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,\r\n            });\r\n        }\r\n    } catch (error) {\r\n        console.error(\"Error updating search count:\", error);\r\n        throw error;\r\n    }\r\n};\r\n\r\nexport const getTrendingMovies = async (): Promise<TrendingMovie[]> => {\r\n    try {\r\n        const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [\r\n            Query.limit(5),\r\n            Query.orderDesc(\"count\"),\r\n        ]);\r\n\r\n        return result.documents as unknown as TrendingMovie[];\r\n    } catch (error) {\r\n        console.error(\"Error fetching trending movies:\", error);\r\n        throw error;\r\n    }\r\n};"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387546433,
+            "isInternal": false
+        },
+        {
+            "id": "93f3a40b-caf5-d60e-15c3-d39e5e96b267",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_41089390",
+                    "toolName": "Read",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\interfaces\\interfaces.d.ts"
+                    },
+                    "output": "Lines 1-78 of 78 from D:\\Programming\\Mobile Development\\mobile_movie_app\\interfaces\\interfaces.d.ts:\ninterface Movie {\r\n  id: number;\r\n  title: string;\r\n  adult: boolean;\r\n  backdrop_path: string;\r\n  genre_ids: number[];\r\n  original_language: string;\r\n  original_title: string;\r\n  overview: string;\r\n  popularity: number;\r\n  poster_path: string;\r\n  release_date: string;\r\n  video: boolean;\r\n  vote_average: number;\r\n  vote_count: number;\r\n}\r\n\r\ninterface TrendingMovie {\r\n  searchTerm: string;\r\n  movie_id: number;\r\n  title: string;\r\n  count: number;\r\n  poster_url: string;\r\n}\r\n\r\ninterface MovieDetails {\r\n  adult: boolean;\r\n  backdrop_path: string | null;\r\n  belongs_to_collection: {\r\n    id: number;\r\n    name: string;\r\n    poster_path: string;\r\n    backdrop_path: string;\r\n  } | null;\r\n  budget: number;\r\n  genres: {\r\n    id: number;\r\n    name: string;\r\n  }[];\r\n  homepage: string | null;\r\n  id: number;\r\n  imdb_id: string | null;\r\n  original_language: string;\r\n  original_title: string;\r\n  overview: string | null;\r\n  popularity: number;\r\n  poster_path: string | null;\r\n  production_companies: {\r\n    id: number;\r\n    logo_path: string | null;\r\n    name: string;\r\n    origin_country: string;\r\n  }[];\r\n  production_countries: {\r\n    iso_3166_1: string;\r\n    name: string;\r\n  }[];\r\n  release_date: string;\r\n  revenue: number;\r\n  runtime: number | null;\r\n  spoken_languages: {\r\n    english_name: string;\r\n    iso_639_1: string;\r\n    name: string;\r\n  }[];\r\n  status: string;\r\n  tagline: string | null;\r\n  title: string;\r\n  video: boolean;\r\n  vote_average: number;\r\n  vote_count: number;\r\n}\r\n\r\ninterface TrendingCardProps {\r\n  movie: TrendingMovie;\r\n  index: number;\r\n}\r\n"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387548380,
+            "isInternal": false
+        },
+        {
+            "id": "6c7e1107-a74b-6452-3a79-4a47ba256ecd",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "cliToolCall",
+                    "toolCallId": "call_48101415",
+                    "toolName": "Write",
+                    "status": "SUCCESS",
+                    "input": {
+                        "file_path": "D:\\Programming\\Mobile Development\\mobile_movie_app\\repo.md",
+                        "content": "# Movies Ocean\n\nA mobile movie browsing application built with React Native and Expo.\n\n## Overview\n\nMovies Ocean is a React Native application that allows users to discover, search, and explore movies. The app fetches movie data from The Movie Database (TMDB) API and tracks trending searches using Appwrite as a backend service.\n\n## Features\n\n- **Browse Latest Movies**: View a grid of popular and latest movies\n- **Search Functionality**: Search for movies by title\n- **Movie Details**: View detailed information about individual movies\n- **Trending Searches**: See what movies other users are searching for most\n- **Cross-Platform**: Runs on iOS, Android, and Web\n\n## Technology Stack\n\n- **Framework**: React Native with Expo\n- **Language**: TypeScript\n- **Styling**: NativeWind (Tailwind CSS for React Native)\n- **Navigation**: Expo Router with React Navigation\n- **API**: TMDB (The Movie Database)\n- **Backend**: Appwrite\n- **State Management**: React hooks\n- **Icons**: Expo Vector Icons\n\n## Project Structure\n\n```\napp/\n├── (tabs)/           # Tab-based navigation screens\n│   ├── index.tsx     # Home screen with latest movies\n│   ├── search.tsx    # Search screen\n│   ├── saved.tsx     # Saved movies (placeholder)\n│   └── profile.tsx   # User profile (placeholder)\n├── components/       # Reusable UI components\n│   ├── MovieCard.tsx\n│   ├── SearchBar.tsx\n│   └── TrendingCard.tsx\n├── movies/\n│   └── [id].tsx      # Dynamic movie details page\n└── _layout.tsx       # Root layout\n\nservices/\n├── api.ts            # TMDB API integration\n├── appwrite.ts       # Appwrite backend services\n└── useFetch.ts       # Custom hook for API calls\n\nconstants/            # App constants (icons, images)\ninterfaces/           # TypeScript type definitions\ntypes/                # Additional type definitions\nassets/               # Static assets (fonts, icons, images)\n```\n\n## Environment Variables\n\nThe app requires the following environment variables (stored in `.env`):\n\n- `EXPO_PUBLIC_MOVIE_API_KEY`: TMDB API key\n- `EXPO_PUBLIC_APPWRITE_PROJECT_ID`: Appwrite project ID\n- `EXPO_PUBLIC_APPWRITE_DATABASE_ID`: Appwrite database ID\n- `EXPO_PUBLIC_APPWRITE_COLLECTION_ID`: Appwrite collection ID\n\n## Getting Started\n\n1. **Install dependencies**:\n   ```bash\n   npm install\n   ```\n\n2. **Set up environment variables**:\n   Create a `.env` file with the required API keys.\n\n3. **Start the development server**:\n   ```bash\n   npx expo start\n   ```\n\n4. **Run on specific platform**:\n   - Android: `npm run android`\n   - iOS: `npm run ios`\n   - Web: `npm run web`\n\n## API Integration\n\n### TMDB API\n- Fetches movie data for browsing and search\n- Provides movie details, posters, and metadata\n- Uses Bearer token authentication\n\n### Appwrite\n- Stores trending search data\n- Tracks search counts for movies\n- Provides real-time trending movies list\n\n## Key Components\n\n- **MovieCard**: Displays movie poster and basic info in grid layout\n- **TrendingCard**: Shows trending movies with search count\n- **SearchBar**: Input component for movie search\n- **useFetch**: Custom hook for API data fetching with loading states\n\n## Development Notes\n\n- Uses Expo Router for file-based routing\n- Implements responsive design with NativeWind\n- Follows TypeScript for type safety\n- Includes ESLint for code quality\n- Supports both light and dark themes"
+                    },
+                    "output": "File created successfully at: D:\\Programming\\Mobile Development\\mobile_movie_app\\repo.md"
+                },
+                {
+                    "type": "codeHunk",
+                    "lineBasedDiff": "--- D:/Programming/Mobile Development/mobile_movie_app/repo.md\n+++ D:/Programming/Mobile Development/mobile_movie_app/repo.md\n@@ -1,1 +1,110 @@\n+# Movies Ocean\n \n+A mobile movie browsing application built with React Native and Expo.\n+\n+## Overview\n+\n+Movies Ocean is a React Native application that allows users to discover, search, and explore movies. The app fetches movie data from The Movie Database (TMDB) API and tracks trending searches using Appwrite as a backend service.\n+\n+## Features\n+\n+- **Browse Latest Movies**: View a grid of popular and latest movies\n+- **Search Functionality**: Search for movies by title\n+- **Movie Details**: View detailed information about individual movies\n+- **Trending Searches**: See what movies other users are searching for most\n+- **Cross-Platform**: Runs on iOS, Android, and Web\n+\n+## Technology Stack\n+\n+- **Framework**: React Native with Expo\n+- **Language**: TypeScript\n+- **Styling**: NativeWind (Tailwind CSS for React Native)\n+- **Navigation**: Expo Router with React Navigation\n+- **API**: TMDB (The Movie Database)\n+- **Backend**: Appwrite\n+- **State Management**: React hooks\n+- **Icons**: Expo Vector Icons\n+\n+## Project Structure\n+\n+```\n+app/\n+├── (tabs)/           # Tab-based navigation screens\n+│   ├── index.tsx     # Home screen with latest movies\n+│   ├── search.tsx    # Search screen\n+│   ├── saved.tsx     # Saved movies (placeholder)\n+│   └── profile.tsx   # User profile (placeholder)\n+├── components/       # Reusable UI components\n+│   ├── MovieCard.tsx\n+│   ├── SearchBar.tsx\n+│   └── TrendingCard.tsx\n+├── movies/\n+│   └── [id].tsx      # Dynamic movie details page\n+└── _layout.tsx       # Root layout\n+\n+services/\n+├── api.ts            # TMDB API integration\n+├── appwrite.ts       # Appwrite backend services\n+└── useFetch.ts       # Custom hook for API calls\n+\n+constants/            # App constants (icons, images)\n+interfaces/           # TypeScript type definitions\n+types/                # Additional type definitions\n+assets/               # Static assets (fonts, icons, images)\n+```\n+\n+## Environment Variables\n+\n+The app requires the following environment variables (stored in `.env`):\n+\n+- `EXPO_PUBLIC_MOVIE_API_KEY`: TMDB API key\n+- `EXPO_PUBLIC_APPWRITE_PROJECT_ID`: Appwrite project ID\n+- `EXPO_PUBLIC_APPWRITE_DATABASE_ID`: Appwrite database ID\n+- `EXPO_PUBLIC_APPWRITE_COLLECTION_ID`: Appwrite collection ID\n+\n+## Getting Started\n+\n+1. **Install dependencies**:\n+   ```bash\n+   npm install\n+   ```\n+\n+2. **Set up environment variables**:\n+   Create a `.env` file with the required API keys.\n+\n+3. **Start the development server**:\n+   ```bash\n+   npx expo start\n+   ```\n+\n+4. **Run on specific platform**:\n+   - Android: `npm run android`\n+   - iOS: `npm run ios`\n+   - Web: `npm run web`\n+\n+## API Integration\n+\n+### TMDB API\n+- Fetches movie data for browsing and search\n+- Provides movie details, posters, and metadata\n+- Uses Bearer token authentication\n+\n+### Appwrite\n+- Stores trending search data\n+- Tracks search counts for movies\n+- Provides real-time trending movies list\n+\n+## Key Components\n+\n+- **MovieCard**: Displays movie poster and basic info in grid layout\n+- **TrendingCard**: Shows trending movies with search count\n+- **SearchBar**: Input component for movie search\n+- **useFetch**: Custom hook for API data fetching with loading states\n+\n+## Development Notes\n+\n+- Uses Expo Router for file-based routing\n+- Implements responsive design with NativeWind\n+- Follows TypeScript for type safety\n+- Includes ESLint for code quality\n+- Supports both light and dark themes",
+                    "refToolCallId": "call_48101415",
+                    "language": "markdown"
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc"
+            },
+            "createdAt": 1763387555135,
+            "isInternal": false
+        },
+        {
+            "id": "435ab172-0c93-c1e8-d83a-1ce0f429fa01",
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "codePatch",
+                    "diffs": [
+                        {
+                            "path": "repo.md",
+                            "fsPath": "D:\\Programming\\Mobile Development\\mobile_movie_app\\repo.md",
+                            "patch": "@@ -0,0 +1,3435 @@\n+# Movies Ocean%0D%0A%0D%0AA mobile movie browsing application built with React Native and Expo.%0D%0A%0D%0A## Overview%0D%0A%0D%0AMovies Ocean is a React Native application that allows users to discover, search, and explore movies. The app fetches movie data from The Movie Database (TMDB) API and tracks trending searches using Appwrite as a backend service.%0D%0A%0D%0A## Features%0D%0A%0D%0A- **Browse Latest Movies**: View a grid of popular and latest movies%0D%0A- **Search Functionality**: Search for movies by title%0D%0A- **Movie Details**: View detailed information about individual movies%0D%0A- **Trending Searches**: See what movies other users are searching for most%0D%0A- **Cross-Platform**: Runs on iOS, Android, and Web%0D%0A%0D%0A## Technology Stack%0D%0A%0D%0A- **Framework**: React Native with Expo%0D%0A- **Language**: TypeScript%0D%0A- **Styling**: NativeWind (Tailwind CSS for React Native)%0D%0A- **Navigation**: Expo Router with React Navigation%0D%0A- **API**: TMDB (The Movie Database)%0D%0A- **Backend**: Appwrite%0D%0A- **State Management**: React hooks%0D%0A- **Icons**: Expo Vector Icons%0D%0A%0D%0A## Project Structure%0D%0A%0D%0A%60%60%60%0D%0Aapp/%0D%0A%E2%94%9C%E2%94%80%E2%94%80 (tabs)/           # Tab-based navigation screens%0D%0A%E2%94%82   %E2%94%9C%E2%94%80%E2%94%80 index.tsx     # Home screen with latest movies%0D%0A%E2%94%82   %E2%94%9C%E2%94%80%E2%94%80 search.tsx    # Search screen%0D%0A%E2%94%82   %E2%94%9C%E2%94%80%E2%94%80 saved.tsx     # Saved movies (placeholder)%0D%0A%E2%94%82   %E2%94%94%E2%94%80%E2%94%80 profile.tsx   # User profile (placeholder)%0D%0A%E2%94%9C%E2%94%80%E2%94%80 components/       # Reusable UI components%0D%0A%E2%94%82   %E2%94%9C%E2%94%80%E2%94%80 MovieCard.tsx%0D%0A%E2%94%82   %E2%94%9C%E2%94%80%E2%94%80 SearchBar.tsx%0D%0A%E2%94%82   %E2%94%94%E2%94%80%E2%94%80 TrendingCard.tsx%0D%0A%E2%94%9C%E2%94%80%E2%94%80 movies/%0D%0A%E2%94%82   %E2%94%94%E2%94%80%E2%94%80 %5Bid%5D.tsx      # Dynamic movie details page%0D%0A%E2%94%94%E2%94%80%E2%94%80 _layout.tsx       # Root layout%0D%0A%0D%0Aservices/%0D%0A%E2%94%9C%E2%94%80%E2%94%80 api.ts            # TMDB API integration%0D%0A%E2%94%9C%E2%94%80%E2%94%80 appwrite.ts       # Appwrite backend services%0D%0A%E2%94%94%E2%94%80%E2%94%80 useFetch.ts       # Custom hook for API calls%0D%0A%0D%0Aconstants/            # App constants (icons, images)%0D%0Ainterfaces/           # TypeScript type definitions%0D%0Atypes/                # Additional type definitions%0D%0Aassets/               # Static assets (fonts, icons, images)%0D%0A%60%60%60%0D%0A%0D%0A## Environment Variables%0D%0A%0D%0AThe app requires the following environment variables (stored in %60.env%60):%0D%0A%0D%0A- %60EXPO_PUBLIC_MOVIE_API_KEY%60: TMDB API key%0D%0A- %60EXPO_PUBLIC_APPWRITE_PROJECT_ID%60: Appwrite project ID%0D%0A- %60EXPO_PUBLIC_APPWRITE_DATABASE_ID%60: Appwrite database ID%0D%0A- %60EXPO_PUBLIC_APPWRITE_COLLECTION_ID%60: Appwrite collection ID%0D%0A%0D%0A## Getting Started%0D%0A%0D%0A1. **Install dependencies**:%0D%0A   %60%60%60bash%0D%0A   npm install%0D%0A   %60%60%60%0D%0A%0D%0A2. **Set up environment variables**:%0D%0A   Create a %60.env%60 file with the required API keys.%0D%0A%0D%0A3. **Start the development server**:%0D%0A   %60%60%60bash%0D%0A   npx expo start%0D%0A   %60%60%60%0D%0A%0D%0A4. **Run on specific platform**:%0D%0A   - Android: %60npm run android%60%0D%0A   - iOS: %60npm run ios%60%0D%0A   - Web: %60npm run web%60%0D%0A%0D%0A## API Integration%0D%0A%0D%0A### TMDB API%0D%0A- Fetches movie data for browsing and search%0D%0A- Provides movie details, posters, and metadata%0D%0A- Uses Bearer token authentication%0D%0A%0D%0A### Appwrite%0D%0A- Stores trending search data%0D%0A- Tracks search counts for movies%0D%0A- Provides real-time trending movies list%0D%0A%0D%0A## Key Components%0D%0A%0D%0A- **MovieCard**: Displays movie poster and basic info in grid layout%0D%0A- **TrendingCard**: Shows trending movies with search count%0D%0A- **SearchBar**: Input component for movie search%0D%0A- **useFetch**: Custom hook for API data fetching with loading states%0D%0A%0D%0A## Development Notes%0D%0A%0D%0A- Uses Expo Router for file-based routing%0D%0A- Implements responsive design with NativeWind%0D%0A- Follows TypeScript for type safety%0D%0A- Includes ESLint for code quality%0D%0A- Supports both light and dark themes\n",
+                            "isNew": true,
+                            "isApplied": true,
+                            "timestamp": 1763387555178
+                        }
+                    ]
+                }
+            ],
+            "context": {
+                "author": "Code agent",
+                "operationId": "31c169cb-eee2-4f9d-a4ec-fde74bfd82b5",
+                "cliSessionId": "1e13c9d9-01e8-4436-95d5-4be9624765cc",
+                "usageStatistics": {
+                    "llmCallsUsedForAnswer": 11.0,
+                    "llmCallsUsedTotal": 11.0,
+                    "llmCallsLimit": 30.0,
+                    "limitRenewalMillisecondTimestamp": 1763449200000
+                }
+            },
+            "createdAt": 1763387557475,
+            "isInternal": false
+        },
+        {
+            "id": "3f095393-f7c1-4f51-a972-1e4642eb59ed",
+            "role": "user",
+            "content": [
+                {
+                    "type": "fileMention",
+                    "fileName": "Pasted image",
+                    "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                    "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png"
+                },
+                {
+                    "type": "text",
+                    "text": " why it still show the text : movies/[id] in the top of the page"
+                }
+            ],
+            "context": {
+                "attachedFiles": [
+                    {
+                        "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                        "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png"
+                    }
+                ],
+                "currentFile": {
+                    "path": "app/movies/[id].tsx",
+                    "fsPath": "D:/Programming/Mobile Development/mobile_movie_app/app/movies/[id].tsx",
+                    "sources": [
+                        "opened_tab"
+                    ],
+                    "content": "import {\n    View,\n    Text,\n    Image,\n    ActivityIndicator,\n    ScrollView,\n    TouchableOpacity,\n} from \"react-native\";\nimport { useLocalSearchParams, useRouter } from \"expo-router\";\nimport { SafeAreaView } from \"react-native-safe-area-context\";\n\nimport { icons } from \"@/constants/icons\";\nimport useFetch from \"@/services/useFetch\";\nimport { fetchMovieDetails } from \"@/services/api\";\n\ninterface MovieInfoProps {\n    label: string;\n    value?: string | number | null;\n}\n\nconst MovieInfo = ({ label, value }: MovieInfoProps) => (\n    <View className=\"flex-col items-start justify-center mt-5\">\n        <Text className=\"text-light-200 font-normal text-sm\">{label}</Text>\n        <Text className=\"text-light-100 font-bold text-sm mt-2\">\n            {value || \"N/A\"}\n        </Text>\n    </View>\n);\n\nconst Details = () => {\n    const router = useRouter();\n    const { id } = useLocalSearchParams();\n\n    const { data: movie, loading } = useFetch<MovieDetails>(() =>\n        fetchMovieDetails(id as string)\n    );\n\n    if (loading)\n        return (\n            <SafeAreaView className=\"bg-primary flex-1\">\n                <ActivityIndicator />\n            </SafeAreaView>\n        );\n\n    return (\n        <View className=\"bg-primary flex-1\">\n            <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>\n                <View>\n                    <Image\n                        source={{\n                            uri: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,\n                        }}\n                        className=\"w-full h-[550px]\"\n                        resizeMode=\"stretch\"\n                    />\n\n                    <TouchableOpacity className=\"absolute bottom-5 right-5 rounded-full size-14 bg-white flex items-center justify-center\">\n                        <Image\n                            source={icons.play}\n                            className=\"w-6 h-7 ml-1\"\n                            resizeMode=\"stretch\"\n                        />\n                    </TouchableOpacity>\n                </View>\n\n                <View className=\"flex-col items-start justify-center mt-5 px-5\">\n                    <Text className=\"text-white font-bold text-xl\">{movie?.title}</Text>\n                    <View className=\"flex-row items-center gap-x-1 mt-2\">\n                        <Text className=\"text-light-200 text-sm\">\n                            {movie?.release_date?.split(\"-\")[0]} •\n                        </Text>\n                        <Text className=\"text-light-200 text-sm\">{movie?.runtime}m</Text>\n                    </View>\n\n                    <View className=\"flex-row items-center bg-dark-100 px-2 py-1 rounded-md gap-x-1 mt-2\">\n                        <Image source={icons.star} className=\"size-4\" />\n\n                        <Text className=\"text-white font-bold text-sm\">\n                            {Math.round(movie?.vote_average ?? 0)}/10\n                        </Text>\n\n                        <Text className=\"text-light-200 text-sm\">\n                            ({movie?.vote_count} votes)\n                        </Text>\n                    </View>\n\n                    <MovieInfo label=\"Overview\" value={movie?.overview} />\n                    <MovieInfo\n                        label=\"Genres\"\n                        value={movie?.genres?.map((g) => g.name).join(\" • \") || \"N/A\"}\n                    />\n\n                    <View className=\"flex flex-row justify-between w-1/2\">\n                        <MovieInfo\n                            label=\"Budget\"\n                            value={`$${(movie?.budget ?? 0) / 1_000_000} million`}\n                        />\n                        <MovieInfo\n                            label=\"Revenue\"\n                            value={`$${Math.round(\n                                (movie?.revenue ?? 0) / 1_000_000\n                            )} million`}\n                        />\n                    </View>\n\n                    <MovieInfo\n                        label=\"Production Companies\"\n                        value={\n                            movie?.production_companies?.map((c) => c.name).join(\" • \") ||\n                            \"N/A\"\n                        }\n                    />\n                </View>\n            </ScrollView>\n\n            <TouchableOpacity\n                className=\"absolute bottom-5 left-0 right-0 mx-5 bg-accent rounded-lg py-3.5 flex flex-row items-center justify-center z-50\"\n                onPress={router.back}\n            >\n                <Image\n                    source={icons.arrow}\n                    className=\"size-5 mr-1 mt-0.5 rotate-180\"\n                    tintColor=\"#fff\"\n                />\n                <Text className=\"text-white font-semibold text-base\">Go Back</Text>\n            </TouchableOpacity>\n        </View>\n    );\n};\n\nexport default Details;",
+                    "language": "typescript jsx"
+                }
+            },
+            "createdAt": 1763387624069,
+            "isInternal": false,
+            "rawContent": {
+                "type": "doc",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "mention",
+                                "attrs": {
+                                    "label": "Pasted image",
+                                    "summary": null,
+                                    "description": null,
+                                    "type": "file",
+                                    "path": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                                    "fsPath": "C:\\Users\\mtoha\\AppData\\Local\\Temp\\zencoder\\pasted\\files\\20251117155153-ᷦ靅𰚯𬑑-image.png",
+                                    "contentType": "image/png",
+                                    "name": null,
+                                    "uri": null,
+                                    "tooltip": null,
+                                    "sessionId": null,
+                                    "timestamp": null,
+                                    "content": null
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " why it still show the text : movies/[id] in the top of the page"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "autoAppliedRules": []
+        },
+        {
+            "id": "34c33a81-dcd0-483f-9f28-75c10313a6d7",
+            "role": "system",
+            "content": [
+                {
+                    "type": "errorText",
+                    "text": "Current model does not support attachments: Image file \"20251117155153-ᷦ靅𰚯𬑑-image.png\" is not supported by the current model",
+                    "actions": [
+                        {
+                            "type": "externalAction",
+                            "title": "Regenerate",
+                            "action": "regenerateLastAnswer"
+                        }
+                    ]
+                }
+            ],
+            "createdAt": 1763387635026,
+            "isInternal": false
+        }
+    ],
+    "isAgent": true,
+    "isNameGenerated": true,
+    "isCustomAgent": false,
+    "isUnitTestsAgent": false,
+    "isE2EAgent": false,
+    "isWebDevAgent": false,
+    "isQnaAgent": false,
+    "isRepoInfoAgent": true,
+    "model": "default",
+    "agentsRuntime": "zen-cli"
+}
+}
